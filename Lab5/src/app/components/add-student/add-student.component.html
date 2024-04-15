@@ -1,0 +1,56 @@
+
+  <div class="container mt-5">
+    <form [formGroup]="studentForm">
+      <h3 class="text-center mb-3">Add New Student</h3>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" formControlName="name" />
+      </div>
+      <div class="form-group">
+        <label for="mobNumber">Mobile Number:</label>
+        <input type="text" class="form-control" id="mobNumber" formControlName="mobNumber" />
+      </div>
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="text" class="form-control" id="age" formControlName="age" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" formControlName="email" >
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" formControlName="password" >
+      </div>
+      <div class="form-group">
+        <label for="addressLine1">Address Line 1:</label>
+        <input type="text" class="form-control" id="addressLine1" formControlName="addressLine1" >
+      </div>
+      <div class="form-group">
+        <label for="addressLine2">Address Line 2:</label>
+        <input type="text" class="form-control" id="addressLine2" formControlName="addressLine2" >
+      </div>
+      <div class="form-row row">
+        <div class="form-group col-md-6">
+          <label for="city">City:</label>
+          <input type="text" class="form-control" id="city" formControlName="city">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="state">State:</label>
+          <input type="text" class="form-control" id="state" formControlName="state" >
+        </div>
+        <div class="form-group col-md-2">
+          <label for="zipCode">Zip Code:</label>
+          <input type="text" class="form-control" id="zipCode" formControlName="zipCode">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <input type="text" class="form-control" id="gender" formControlName="gender" >
+      </div>
+      <div class="d-flex justify-content-center mt-3">
+        <input type="submit" (click)="AddUser()" class="btn btn-success" value="Add"/>
+    </div>
+    </form>
+
+  </div>

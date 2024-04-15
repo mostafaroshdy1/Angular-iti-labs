@@ -1,0 +1,64 @@
+@if(student){
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="mb-0">Student Information for Student ID: {{student.id}}</h5>
+      </div>
+      <div class="card-body">
+        <div class="user-info">
+          <div class="info-label">Name:</div>
+          <div class="info-value">{{student.name}}</div>
+        </div>
+        <div class="user-info">
+          <div class="info-label">Mobile Number:</div>
+          <div class="info-value">{{student.mobNumber}}</div>
+        </div>
+        <div class="user-info">
+          <div class="info-label">Age:</div>
+          <div class="info-value">{{student.age}}</div>
+        </div>
+        <div class="user-info">
+          <div class="info-label">Email:</div>
+          <div class="info-value">{{student.email}}</div>
+        </div>
+        <div class="user-info">
+          <div class="info-label">Address:</div>
+          <span class="info-value">{{student.address.addressLine1}}, {{student.address.addressLine2}}, {{student.address.city}}, {{student.address.state}}, {{student.address.zipCode}}</span>
+        </div>
+        <div class="user-info">
+          <div class="info-label">Gender:</div>
+          <span class="info-value">{{student.gender}}</span>
+        </div>
+      </div>
+      <div class="card-footer text-muted">
+        <a routerLink="/student/{{student.id}}/update" class="btn btn-warning">Update</a>
+
+        <a (click)="deleteStd()" class="btn btn-danger ms-3">Delete</a>
+        <app-confirm-deletion *ngIf="showConfirmationDialog"
+                                (deleteConfirmed)="deleteStudent()">
+</app-confirm-deletion>
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal trigger button -->
+
+
+
+
+
+}
+@else {
+  <!-- loading icon -->
+  <div class="container mt-5">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6 text-center mt-5">
+        <div class="spinner-border text-primary" role="status">
+          <span class="sr-only"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+}

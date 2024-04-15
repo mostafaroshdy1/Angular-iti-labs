@@ -1,0 +1,7 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let std of students; trackBy: trackById">
+      <app-one-student [student]="std"></app-one-student>
+    </div>
+  </div>
+</div>

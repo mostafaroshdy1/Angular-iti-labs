@@ -1,0 +1,69 @@
+
+@if(user){
+<div class="container mt-5">
+  <form action="#" method="post">
+    <h3 class="text-center display-5">Update User</h3>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" name="name" id="name" [(ngModel)]="user.name" value="{{user.name}}" >
+    </div>
+    <div class="form-group">
+      <label for="mobNumber">Mobile Number:</label>
+      <input type="text" class="form-control" name="mobNumber" id="mobNumber" [(ngModel)]="user.mobNumber"  value="{{user.mobNumber}}" >
+    </div>
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input type="text" class="form-control" name="age" id="age" [(ngModel)]="user.age" value="{{user.age}}" >
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" name="email" id="email"  [(ngModel)]="user.email" value="{{user.email}}" >
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" class="form-control" name="password" id="password"  [(ngModel)]="user.password" value="{{user.password}}" >
+    </div>
+    <div class="form-group">
+      <label for="addressLine1">Address Line 1:</label>
+      <input type="text" class="form-control" name="addressLine1" id="addressLine1"  [(ngModel)]="user.address.addressLine1" value="{{user.address.addressLine1}}" >
+    </div>
+    <div class="form-group">
+      <label for="addressLine2">Address Line 2:</label>
+      <input type="text" class="form-control" name="addressLine2" id="addressLine2" [(ngModel)]="user.address.addressLine2" value="{{user.address.addressLine2}}" >
+    </div>
+    <div class="form-row row">
+      <div class="form-group col-md-6">
+        <label for="city">City:</label>
+        <input type="text" class="form-control" name="city" id="city"  [(ngModel)]="user.address.city" value="{{user.address.city}}">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="state">State:</label>
+        <input type="text" class="form-control" name="state" id="state" [(ngModel)]="user.address.state" value="{{user.address.state}}" >
+      </div>
+      <div class="form-group col-md-2">
+        <label for="zipCode">Zip Code:</label>
+        <input type="text" class="form-control" name="zipCode" id="zipCode" [(ngModel)]="user.address.zipCode" value="{{user.address.zipCode}}">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="gender">Gender:</label>
+      <input type="text" class="form-control" name="gender" id="gender" [(ngModel)]="user.gender"  value="{{user.gender}}" >
+    </div>
+    <div class="d-flex justify-content-center mt-3">
+      <a (click)="UpdateUser()" class="btn btn-warning">Update</a>
+  </div>
+  </form>
+
+</div>
+}
+@else {
+  <div class="container mt-5">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6 text-center mt-5">
+        <div class="spinner-border text-primary" role="status">
+          <span class="sr-only"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+}
